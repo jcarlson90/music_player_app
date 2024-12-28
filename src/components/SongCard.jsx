@@ -1,11 +1,17 @@
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 
 
 import PlayPause from './PlayPause';
 import { playPause, setActiveSong } from '../redux/features/playerSlice';
 
 const SongCard = ({ song, isPlaying, activeSong, data, i }) => {
+
+  // useEffect(() => {
+  //   // This effect runs whenever `someProp` changes
+  //   console.log('The value of someProp is:', song);
+  // }, [song]);
 
   const dispatch = useDispatch ();
 
@@ -38,7 +44,7 @@ const SongCard = ({ song, isPlaying, activeSong, data, i }) => {
           activeSong={activeSong}
         />
         </div> 
-        <img alt="song_img" src={song.images?.coverart} />
+        <img alt="song_img" src={song.attributes.artwork.url} />
       </div>
       <div className='mt-4 flex flex-col'>
         <p className='font-semibold text-lg text-white truncate'>

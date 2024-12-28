@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { navLink } from 'react-router-dom';
+//import { navLink } from 'react-router-dom';
 import { RiCloseLine } from 'react-icons/ri';
 
 import { logo } from '../assets';
